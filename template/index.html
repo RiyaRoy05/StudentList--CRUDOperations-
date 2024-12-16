@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" />
+    <title>Student List</title>
+  </head>
+  <body>
+    <div class="index-page">
+      <h1 class="index-h1">Lists of Students</h1>
+      <div class="index-a-div" style="display: flex;">
+        <button class="index-btn"><a href="/second">Add a New Student</a></button>
+        <button class="contact-btn"><a href="/Contact">Contact Us</a></button>
+      </div>
+      <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Profile Picture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+          <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.phone }}</td>
+            <td>{{ student.date_of_birth }}</td>
+            <td>{{ student.email }}</td>
+            <td>
+              <img src="{{ student.image.url }}"
+                alt="Profile Picture"
+                width="100"
+              />
+            </td>
+            <td>
+              <button class="up"><a href="/update/{{student.id}}">Update</a></button>
+              <button class="del"><a href="/hDel/{{student.id}}">Delete</a></button>
+              <button class="view"><a href="/Details/{{student.id}}">View</a></button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+form{
+    width: 500px;
+    height: 430px;
+}
+
+label{
+  
+    margin-left: 10px;
+}
+#id_name{
+    width: 400px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+p{
+    margin-left: 50px;
+}
+
+#id_phone{
+    width: 400px;
+    margin-left: 10px;
+    padding: 5px;  
+}
+
+#id_date_of_birth{
+    width: 350px;
+    margin-left: 10px;
+    padding: 5px;  
+}
+
+#id_email{
+    width: 400px;
+    margin-left: 10px;
+    padding: 5px; 
+}
+
+#id_image{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.update-div{
+    margin-left: 350px;
+}
+
+.update-btn{
+    margin-left: 50px;
+    border: none;
+    background-color: rgb(17, 69, 17);
+    width: 500px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+}
+
+.update-btn:hover{
+    background-color: rgb(47, 114, 47);
+}
